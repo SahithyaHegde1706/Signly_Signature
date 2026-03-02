@@ -15,7 +15,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://signly-signature.onrender.com/api/auth/login",
         { email, password }
       );
 
@@ -37,7 +37,7 @@ const Login = () => {
       const user = result.user;
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/google",
+        "https://signly-signature.onrender.com/api/auth/google",
         {
           name: user.displayName,
           email: user.email,

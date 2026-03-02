@@ -24,7 +24,7 @@ const Dashboard = () => {
   const fetchDocuments = async (token: string) => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/docs",
+        "https://signly-signature.onrender.com/api/docs",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/docs/upload",
+        "https://signly-signature.onrender.com/api/docs/upload",
         formData,
         {
           headers: {
@@ -73,7 +73,7 @@ const Dashboard = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/docs/${id}`,
+        `https://signly-signature.onrender.com/api/docs/${id}`,
         {
           headers: { Authorization: `Bearer ${user.token}` },
         }
@@ -91,7 +91,7 @@ const Dashboard = () => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/docs/${id}/status`,
+        `https://signly-signature.onrender.com/api/docs/${id}/status`,
         { status: newStatus },
         {
           headers: { Authorization: `Bearer ${user.token}` },
@@ -108,7 +108,7 @@ const Dashboard = () => {
 
     try {
       const { data } = await axios.post(
-        `http://localhost:5000/api/docs/${id}/generate-link`,
+        `https://signly-signature.onrender.com/api/docs/${id}/generate-link`,
         {},
         {
           headers: { Authorization: `Bearer ${user.token}` },

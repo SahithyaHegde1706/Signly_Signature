@@ -15,7 +15,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", {
+      await axios.post("https://signly-signature.onrender.com/api/auth/register", {
         name,
         email,
         password,
@@ -36,7 +36,7 @@ const Signup = () => {
       const user = result.user;
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/google",
+        "https://signly-signature.onrender.com/api/auth/google",
         {
           name: user.displayName,
           email: user.email,

@@ -65,7 +65,7 @@ router.get("/", protect, async (req, res) => {
 
     const docsWithUrl = documents.map((doc) => ({
       ...doc._doc,
-      fileUrl: `http://localhost:5000/${doc.filePath}`,
+      fileUrl: `https://signly-signature.onrender.com/${doc.filePath}`,
     }));
 
     res.json(docsWithUrl);

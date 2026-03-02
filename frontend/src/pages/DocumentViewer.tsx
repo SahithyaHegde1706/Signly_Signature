@@ -53,7 +53,7 @@ const DocumentViewer = () => {
     if (!token) return;
 
     const { data } = await axios.get(
-      "http://localhost:5000/api/docs",
+      "https://signly-signature.onrender.com/api/docs",
       { headers: { Authorization: `Bearer ${token}` } }
     );
 
@@ -64,7 +64,7 @@ const DocumentViewer = () => {
       const cleanPath = doc.filePath.startsWith("/")
         ? doc.filePath
         : `/${doc.filePath}`;
-      setFileUrl(`http://localhost:5000${cleanPath}`);
+      setFileUrl(`https://signly-signature.onrender.com${cleanPath}`);
     }
   };
 
@@ -74,7 +74,7 @@ const DocumentViewer = () => {
     if (!token) return;
 
     const { data } = await axios.get(
-      `http://localhost:5000/api/signatures/${id}`,
+      `https://signly-signature.onrender.com/api/signatures/${id}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 
@@ -88,7 +88,7 @@ const DocumentViewer = () => {
 
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/api/audit/${id}`,
+        `https://signly-signature.onrender.com/api/audit/${id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -111,7 +111,7 @@ const DocumentViewer = () => {
     if (!token) return;
 
     const { data } = await axios.post(
-      "http://localhost:5000/api/signatures",
+      "https://signly-signature.onrender.com/api/signatures",
       {
         documentId: id,
         x,
@@ -176,7 +176,7 @@ const DocumentViewer = () => {
     if (!token) return;
 
     await axios.put(
-      `http://localhost:5000/api/signatures/${activeId}`,
+      `https://signly-signature.onrender.com/api/signatures/${activeId}`,
       {
         x: updatedSig.x,
         y: updatedSig.y,
@@ -197,7 +197,7 @@ const DocumentViewer = () => {
     if (!token) return;
 
     await axios.delete(
-      `http://localhost:5000/api/signatures/${signatureId}`,
+      `https://signly-signature.onrender.com/api/signatures/${signatureId}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 
@@ -212,7 +212,7 @@ const DocumentViewer = () => {
     if (!token) return;
 
     await axios.post(
-      `http://localhost:5000/api/docs/${id}/finalize`,
+      `https://signly-signature.onrender.com/api/docs/${id}/finalize`,
       {},
       { headers: { Authorization: `Bearer ${token}` } }
     );

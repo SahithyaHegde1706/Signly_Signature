@@ -26,7 +26,7 @@ const Documents = () => {
   const fetchSignedDocs = async (token: string) => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/docs",
+        "https://signly-signature.onrender.com/api/docs",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -49,7 +49,7 @@ const Documents = () => {
   const handleShare = async (id: string) => {
     try {
       const { data } = await axios.post(
-        `http://localhost:5000/api/docs/${id}/generate-link`,
+        `https://signly-signature.onrender.com/api/docs/${id}/generate-link`,
         {},
         {
           headers: {

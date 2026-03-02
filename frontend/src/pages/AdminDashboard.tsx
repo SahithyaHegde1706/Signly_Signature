@@ -21,7 +21,7 @@ const AdminDashboard = () => {
   const fetchStats = async () => {
     const token = getToken();
     const { data } = await axios.get(
-      "http://localhost:5000/api/admin/stats",
+      "https://signly-signature.onrender.com/api/admin/stats",
       { headers: { Authorization: `Bearer ${token}` } }
     );
     setStats(data);
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
   const fetchUsers = async () => {
     const token = getToken();
     const { data } = await axios.get(
-      "http://localhost:5000/api/admin/users",
+      "https://signly-signature.onrender.com/api/admin/users",
       { headers: { Authorization: `Bearer ${token}` } }
     );
     setUsers(data);
@@ -39,7 +39,7 @@ const AdminDashboard = () => {
   const fetchDocuments = async () => {
     const token = getToken();
     const { data } = await axios.get(
-      "http://localhost:5000/api/admin/documents",
+      "https://signly-signature.onrender.com/api/admin/documents",
       { headers: { Authorization: `Bearer ${token}` } }
     );
     setDocuments(data);
@@ -48,7 +48,7 @@ const AdminDashboard = () => {
   const deleteUser = async (id: string) => {
     const token = getToken();
     await axios.delete(
-      `http://localhost:5000/api/admin/users/${id}`,
+      `https://signly-signature.onrender.com/api/admin/users/${id}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
     fetchUsers();
@@ -64,7 +64,7 @@ const AdminDashboard = () => {
     if (!confirmDelete) return;
 
     await axios.delete(
-      `http://localhost:5000/api/admin/documents/${id}`,
+      `https://signly-signature.onrender.com/api/admin/documents/${id}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 

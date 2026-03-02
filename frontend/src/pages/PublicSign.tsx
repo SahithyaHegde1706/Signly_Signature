@@ -18,7 +18,7 @@ const PublicSign = () => {
   const fetchDocument = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/api/docs/public/${token}`
+        `https://signly-signature.onrender.com/api/docs/public/${token}`
       );
       setDocument(data);
     } catch (err: any) {
@@ -31,7 +31,7 @@ const PublicSign = () => {
   const handleAction = async (action: "accept" | "reject") => {
     try {
       await axios.post(
-        `http://localhost:5000/api/docs/public/${token}/action`,
+        `https://signly-signature.onrender.com/api/docs/public/${token}/action`,
         {
           action,
           rejectionReason,
@@ -69,7 +69,7 @@ const PublicSign = () => {
 
         {/* PDF Preview */}
         <iframe
-          src={`http://localhost:5000${document.filePath}`}
+          src={`https://signly-signature.onrender.com${document.filePath}`}
           width="100%"
           height="600px"
           className="mb-6"
