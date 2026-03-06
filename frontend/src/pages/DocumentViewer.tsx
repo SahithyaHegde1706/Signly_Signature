@@ -104,8 +104,8 @@ const DocumentViewer = () => {
     if (!containerRef.current || !isAddMode || !signatureText.trim()) return;
 
     const rect = containerRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+    const y = Math.max(0, Math.min(e.clientY - rect.top, rect.height));
 
     const token = getToken();
     if (!token) return;
@@ -139,8 +139,8 @@ const DocumentViewer = () => {
     const rect = containerRef.current.getBoundingClientRect();
 
     if (draggingId) {
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+      const y = Math.max(0, Math.min(e.clientY - rect.top, rect.height));
 
       setSignatures((prev) =>
         prev.map((sig) =>
@@ -373,15 +373,14 @@ const DocumentViewer = () => {
             onMouseUp={handleMouseUp}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gray-200 flex justify-center">              <iframe
-              src={`${fileUrl}#toolbar=1`}
-              className="w-[900px] h-[1200px] bg-white shadow-lg pointer-events-none"
+              src={`${fileUrl}#toolbar=1&zoom=page-width`} className="w-[850px] h-[1100px] bg-white shadow-xl pointer-events-none"
             />
             </div>
 
             {signatures.map((sig) => (
               <div
                 key={sig._id}
-                className="absolute group z-20"
+                className="absolute group z-50"
                 style={{
                   left: sig.x,
                   top: sig.y,
