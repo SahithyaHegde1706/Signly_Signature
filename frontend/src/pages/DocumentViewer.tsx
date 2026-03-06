@@ -359,7 +359,7 @@ const DocumentViewer = () => {
         {fileUrl && (
           <div
             ref={containerRef}
-            className="relative max-w-4xl mx-auto"
+            className="relative max-w-4xl mx-auto overflow-auto"
             onClick={handleClick}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -368,7 +368,7 @@ const DocumentViewer = () => {
             <div className="w-full h-[85vh] overflow-auto bg-gray-200 flex justify-center">
               <iframe
                 src={`${fileUrl}#toolbar=1`}
-                className="w-[900px] h-[1200px] bg-white shadow-lg"
+                className="w-[900px] h-[1200px] bg-white shadow-lg pointer-events-none"
               />
             </div>
 
