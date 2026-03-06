@@ -104,8 +104,8 @@ const DocumentViewer = () => {
     if (!containerRef.current || !isAddMode || !signatureText.trim()) return;
 
     const rect = containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
     const token = getToken();
     if (!token) return;
@@ -139,8 +139,8 @@ const DocumentViewer = () => {
     const rect = containerRef.current.getBoundingClientRect();
 
     if (draggingId) {
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = (e.clientY - rect.top) / rect.height;
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
       setSignatures((prev) =>
         prev.map((sig) =>
@@ -155,7 +155,10 @@ const DocumentViewer = () => {
           sig._id === resizingId
             ? {
               ...sig,
-              fontSize: Math.max(sig.fontSize + e.movementX * 0.5, 12),
+              fontSize: Math.min(
+                Math.max(sig.fontSize + e.movementX * 0.5, 12),
+                120
+              )
             }
             : sig
         )
@@ -359,26 +362,29 @@ const DocumentViewer = () => {
         {fileUrl && (
           <div
             ref={containerRef}
-            className="relative max-w-4xl mx-auto overflow-auto"
+            className="relative mx-auto"
+            style={{
+              width: "900px",
+              height: "1200px",
+              cursor: isAddMode ? "crosshair" : "default"
+            }}
             onClick={handleClick}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
-            style={{ cursor: isAddMode ? "crosshair" : "default" }}
           >
-            <div className="w-full h-[85vh] overflow-auto bg-gray-200 flex justify-center">
-              <iframe
-                src={`${fileUrl}#toolbar=1`}
-                className="w-[900px] h-[1200px] bg-white shadow-lg pointer-events-none"
-              />
+            <div className="absolute top-0 left-0 w-full h-full bg-gray-200 flex justify-center">              <iframe
+              src={`${fileUrl}#toolbar=1`}
+              className="w-[900px] h-[1200px] bg-white shadow-lg pointer-events-none"
+            />
             </div>
 
             {signatures.map((sig) => (
               <div
                 key={sig._id}
-                className="absolute group"
+                className="absolute group z-20"
                 style={{
-                  left: `${sig.x * 100}%`,
-                  top: `${sig.y * 100}%`,
+                  left: sig.x,
+                  top: sig.y,
                   transform: "translate(-50%, -50%)",
                 }}
               >
