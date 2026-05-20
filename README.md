@@ -6,18 +6,18 @@ The platform provides an intuitive interface for document signing with features 
 
 ---
 
-## 🚀 Features
+## Features
 
-➜ Secure JWT Authentication
-➜ User & Admin Role-Based Access
-➜ Upload and View PDF Documents
-➜ Digital Signature Placement
-➜ Drag & Resize Signatures
-➜ Signature Styling (Font, Color, Bold, Italic)
-➜ Document Finalization Workflow
-➜ Audit History Tracking
-➜ Responsive UI with Tailwind CSS
-➜ MERN Stack Architecture
+- Secure JWT Authentication
+- User & Admin Role-Based Access
+- Upload and View PDF Documents
+- Digital Signature Placement
+- Drag & Resize Signatures
+- Signature Styling (Font, Color, Bold, Italic)
+- Document Finalization Workflow
+- Audit History Tracking
+- Responsive UI with Tailwind CSS
+- MERN Stack Architecture
 
 ---
 
