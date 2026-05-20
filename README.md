@@ -19,179 +19,98 @@ The platform provides an intuitive interface for document signing with features 
 - Responsive UI with Tailwind CSS
 - MERN Stack Architecture
 
----
+## Tech Stack
 
-# 🛠️ Tech Stack
-
-## Frontend
-
+### Frontend:-
 * React.js
 * TypeScript
 * Tailwind CSS
 * React Router
 * Axios
 
-## Backend
-
+### Backend:-
 * Node.js
 * Express.js
 * MongoDB
-* Mongoose
 * JWT Authentication
 
-## Other Tools & Services
-
+### Other Tools & Services:-
 * Multer (File Uploads)
 * Git & GitHub
 * Render (Backend Deployment)
 * Vercel (Frontend Deployment)
 
----
-
-# 📂 Project Structure
-
-```bash
-Signly/
-│
-├── frontend/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── routes/
-│   └── assets/
-│
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   └── uploads/
-│
-└── README.md
-```
-
----
-
-# 🔐 Authentication System
-
+## Authentication System
 Signly uses JWT-based authentication for secure access.
 
-### Roles
-
+### Roles:-
 * User
 * Admin
 
-### Features
-
+### Features:-
 * Login / Signup
 * Protected Routes
 * Role-Based Navigation
 * Persistent Login Sessions
 
----
+## Core Modules
 
-# 📄 Core Modules
-
-## 1️⃣ Document Upload Module
-
+## 1️⃣ Document Upload Module:-
 Users can upload PDF documents securely.
 
-### Features
-
+### Features:-
 * PDF Upload Support
 * Server-side File Storage
 * Document Metadata Management
 
----
-
-## 2️⃣ Document Viewer Module
-
+## 2️⃣ Document Viewer Module:-
 PDF files are displayed directly inside the browser using an iframe-based viewer.
 
-### Features
-
+### Features:-
 * Live PDF Preview
 * Embedded Viewer
 * Clean UI
 
----
-
-## 3️⃣ Digital Signature Module
-
+## 3️⃣ Digital Signature Module:-
 Users can place signatures anywhere on the PDF.
 
-### Features
-
+### Features:-
 * Click-to-place Signature
 * Drag & Move Signature
 * Resize Signature
 * Signature Styling Options
 
----
-
-## 4️⃣ Audit Log Module
-
+## 4️⃣ Audit Log Module:-
 Tracks all document-related activities.
 
-### Tracks
-
+### Tracks:-
 * Signature Actions
 * User Details
 * IP Address
 * Timestamp Logs
 
----
-
-## 5️⃣ Admin Dashboard
-
+## 5️⃣ Admin Dashboard:-
 Admins can monitor system activities and manage documents.
 
-### Features
-
+### Features:-
 * User Monitoring
 * Document Management
 * Audit Visibility
 
----
-
-# 🎨 Signature Customization
-
-Users can customize signatures using:
-
+## Signature Customization:-
+Users can customize signatures using:-
 * Multiple Fonts
 * Adjustable Font Size
 * Color Picker
 * Bold / Italic Styles
 
----
+## Screenshots:-
+<img width="1509" height="837" alt="WhatsApp Image 2026-05-20 at 1 49 46 PM" src="https://github.com/user-attachments/assets/277b9ad1-bbe5-4480-a38e-b21950b7d98c" />
 
-# 📸 Screenshots
+<img width="1527" height="911" alt="WhatsApp Image 2026-05-20 at 1 49 47 PM" src="https://github.com/user-attachments/assets/be267a14-b17d-4405-98b7-ab84fcdcb93b" />
 
-## Login Page
+<img width="1600" height="764" alt="WhatsApp Image 2026-05-20 at 1 49 47 PM (1)" src="https://github.com/user-attachments/assets/93254aab-46e6-42a1-b9c1-22e828a7c64e" />
 
-(Add Screenshot Here)
-
-## User Dashboard
-
-(Add Screenshot Here)
-
-## Document Viewer
-
-(Add Screenshot Here)
-
-## Signature Placement
-
-(Add Screenshot Here)
-
-## Audit History
-
-(Add Screenshot Here)
-
-## Admin Dashboard
-
-(Add Screenshot Here)
-
----
 
 # ⚙️ Installation & Setup
 
