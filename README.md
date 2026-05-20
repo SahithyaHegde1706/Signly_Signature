@@ -1,70 +1,308 @@
-# 🚀 Signly – MERN eSignature Platform
+# Signly – Digital Document Signing Platform ✍️📄
 
-Signly is a full-stack MERN-based eSignature application that allows users to upload PDFs, place draggable digital signatures, generate signed documents using PDF-Lib, share secure public signing links, and maintain a complete audit trail.
+Signly is a modern MERN stack based digital document signing platform that allows users to upload PDF documents, place digital signatures, manage signing workflows, and track document activities securely.
 
----
-
-## 🌟 Features
-
-### 🔐 Authentication
-- User registration & login (JWT-based authentication)
-- Password hashing with bcrypt
-- Protected API routes
-
-### 📤 Document Management
-- Upload PDF documents
-- Store file metadata (size, path, upload time)
-- View & filter documents by status (Pending / Signed / Rejected)
-- Delete documents
-
-### ✍️ Signature Designer
-- Drag-and-drop signature placement
-- Adjustable font, size, color
-- Bold & italic options
-- Resize and reposition signature fields
-- Save coordinates relative to PDF
-
-### 📄 PDF Processing
-- Generate final signed PDF using **PDF-Lib**
-- Embed signatures directly into the document
-- Save signed version on server
-
-### 🔗 Public Signing
-- Generate token-based signing links
-- External users can Accept / Reject document
-- Expiry-based secure links
-
-### 📜 Audit Trail
-- Log document actions (Upload, Link Generation, Sign, Reject)
-- Store signer name, timestamp, and IP address
-- View audit history per document
-
-### 📊 Dashboard
-- Status counters (Pending / Signed / Rejected)
-- Search & filter functionality
-- Clean Tailwind-based UI
+The platform provides an intuitive interface for document signing with features like drag-and-drop signature placement, document finalization, audit history tracking, and role-based dashboards.
 
 ---
 
-## 🛠 Tech Stack
+## 🚀 Features
 
-### Frontend
-- React (TypeScript)
-- Tailwind CSS
-- Axios
-- React Router
-- Lucide Icons
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
-- Multer (File Upload)
-- PDF-Lib (PDF Processing)
-- JWT Authentication
-- bcrypt (Password Hashing)
-
-### Database
-- MongoDB Atlas
+➜ Secure JWT Authentication
+➜ User & Admin Role-Based Access
+➜ Upload and View PDF Documents
+➜ Digital Signature Placement
+➜ Drag & Resize Signatures
+➜ Signature Styling (Font, Color, Bold, Italic)
+➜ Document Finalization Workflow
+➜ Audit History Tracking
+➜ Responsive UI with Tailwind CSS
+➜ MERN Stack Architecture
 
 ---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* React.js
+* TypeScript
+* Tailwind CSS
+* React Router
+* Axios
+
+## Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* JWT Authentication
+
+## Other Tools & Services
+
+* Multer (File Uploads)
+* Git & GitHub
+* Render (Backend Deployment)
+* Vercel (Frontend Deployment)
+
+---
+
+# 📂 Project Structure
+
+```bash
+Signly/
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── routes/
+│   └── assets/
+│
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── uploads/
+│
+└── README.md
+```
+
+---
+
+# 🔐 Authentication System
+
+Signly uses JWT-based authentication for secure access.
+
+### Roles
+
+* User
+* Admin
+
+### Features
+
+* Login / Signup
+* Protected Routes
+* Role-Based Navigation
+* Persistent Login Sessions
+
+---
+
+# 📄 Core Modules
+
+## 1️⃣ Document Upload Module
+
+Users can upload PDF documents securely.
+
+### Features
+
+* PDF Upload Support
+* Server-side File Storage
+* Document Metadata Management
+
+---
+
+## 2️⃣ Document Viewer Module
+
+PDF files are displayed directly inside the browser using an iframe-based viewer.
+
+### Features
+
+* Live PDF Preview
+* Embedded Viewer
+* Clean UI
+
+---
+
+## 3️⃣ Digital Signature Module
+
+Users can place signatures anywhere on the PDF.
+
+### Features
+
+* Click-to-place Signature
+* Drag & Move Signature
+* Resize Signature
+* Signature Styling Options
+
+---
+
+## 4️⃣ Audit Log Module
+
+Tracks all document-related activities.
+
+### Tracks
+
+* Signature Actions
+* User Details
+* IP Address
+* Timestamp Logs
+
+---
+
+## 5️⃣ Admin Dashboard
+
+Admins can monitor system activities and manage documents.
+
+### Features
+
+* User Monitoring
+* Document Management
+* Audit Visibility
+
+---
+
+# 🎨 Signature Customization
+
+Users can customize signatures using:
+
+* Multiple Fonts
+* Adjustable Font Size
+* Color Picker
+* Bold / Italic Styles
+
+---
+
+# 📸 Screenshots
+
+## Login Page
+
+(Add Screenshot Here)
+
+## User Dashboard
+
+(Add Screenshot Here)
+
+## Document Viewer
+
+(Add Screenshot Here)
+
+## Signature Placement
+
+(Add Screenshot Here)
+
+## Audit History
+
+(Add Screenshot Here)
+
+## Admin Dashboard
+
+(Add Screenshot Here)
+
+---
+
+# ⚙️ Installation & Setup
+
+## Clone Repository
+
+```bash
+git clone https://github.com/your-username/signly.git
+```
+
+---
+
+## Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd backend
+npm install
+npm run server
+```
+
+---
+
+# 🌐 Environment Variables
+
+Create a `.env` file inside backend folder:
+
+```env
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+PORT=5000
+```
+
+---
+
+# 🚀 Deployment
+
+## Frontend
+
+Deployed on Vercel
+
+## Backend
+
+Deployed on Render
+
+---
+
+# 📈 Future Enhancements
+
+➜ Multi-user document signing
+➜ Email notification system
+➜ Download signed PDFs
+➜ Cloud storage integration
+➜ Real-time collaboration
+➜ Mobile application support
+
+---
+
+# ⚠️ Limitations
+
+* No payment integration
+* Limited multi-document workflow
+* No real-time notifications
+* Single document signing flow
+
+---
+
+# 🎯 Conclusion
+
+Signly simplifies digital document signing using a modern MERN stack architecture.
+
+The platform demonstrates real-world implementation of:
+
+* Authentication
+* File Handling
+* PDF Management
+* Signature Workflows
+* Audit Tracking
+
+It provides a scalable foundation for future SaaS-based document signing solutions.
+
+---
+
+# 👨‍💻 Author
+
+### Sahithya Hegde
+
+Passionate Full Stack Developer focused on building modern web applications using the MERN stack.
+
+---
+
+# 🔗 Explore Signly Here
+
+🚀 Live Demo: YOUR_LINK_HERE
+💻 GitHub Repository: YOUR_GITHUB_LINK_HERE
+
+---
+
+# 📚 References
+
+* React.js Documentation
+* Node.js Documentation
+* Express.js Documentation
+* MongoDB Documentation
+* JWT Documentation
+* Tailwind CSS Documentation
