@@ -6,7 +6,7 @@ The platform provides an intuitive interface for document signing with features 
 
 ---
 
-## Features
+## ✨ Features
 
 - Secure JWT Authentication
 - User & Admin Role-Based Access
@@ -19,7 +19,7 @@ The platform provides an intuitive interface for document signing with features 
 - Responsive UI with Tailwind CSS
 - MERN Stack Architecture
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend:-
 * React.js
@@ -40,7 +40,7 @@ The platform provides an intuitive interface for document signing with features 
 * Render (Backend Deployment)
 * Vercel (Frontend Deployment)
 
-## Authentication System
+## 🔐 Authentication System
 Signly uses JWT-based authentication for secure access.
 
 ### Roles:-
@@ -104,124 +104,26 @@ Users can customize signatures using:-
 * Color Picker
 * Bold / Italic Styles
 
-## Screenshots:-
+## 📸 Screenshots:-
 <img width="1509" height="837" alt="WhatsApp Image 2026-05-20 at 1 49 46 PM" src="https://github.com/user-attachments/assets/277b9ad1-bbe5-4480-a38e-b21950b7d98c" />
 
 <img width="1527" height="911" alt="WhatsApp Image 2026-05-20 at 1 49 47 PM" src="https://github.com/user-attachments/assets/be267a14-b17d-4405-98b7-ab84fcdcb93b" />
 
 <img width="1600" height="764" alt="WhatsApp Image 2026-05-20 at 1 49 47 PM (1)" src="https://github.com/user-attachments/assets/93254aab-46e6-42a1-b9c1-22e828a7c64e" />
 
+## Deployment
 
-# ⚙️ Installation & Setup
-
-## Clone Repository
-
-```bash
-git clone https://github.com/your-username/signly.git
-```
-
----
-
-## Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
----
-
-## Backend Setup
-
-```bash
-cd backend
-npm install
-npm run server
-```
-
----
-
-# 🌐 Environment Variables
-
-Create a `.env` file inside backend folder:
-
-```env
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_secret_key
-PORT=5000
-```
-
----
-
-# 🚀 Deployment
-
-## Frontend
-
+### Frontend:-
 Deployed on Vercel
 
-## Backend
-
+### Backend:-
 Deployed on Render
 
----
-
-# 📈 Future Enhancements
-
-➜ Multi-user document signing
-➜ Email notification system
-➜ Download signed PDFs
-➜ Cloud storage integration
-➜ Real-time collaboration
-➜ Mobile application support
-
----
-
-# ⚠️ Limitations
-
-* No payment integration
-* Limited multi-document workflow
-* No real-time notifications
-* Single document signing flow
-
----
-
-# 🎯 Conclusion
-
+## 🏁 Conclusion:-
 Signly simplifies digital document signing using a modern MERN stack architecture.
-
-The platform demonstrates real-world implementation of:
-
+The platform demonstrates real-world implementation of:-
 * Authentication
 * File Handling
 * PDF Management
 * Signature Workflows
 * Audit Tracking
-
-It provides a scalable foundation for future SaaS-based document signing solutions.
-
----
-
-# 👨‍💻 Author
-
-### Sahithya Hegde
-
-Passionate Full Stack Developer focused on building modern web applications using the MERN stack.
-
----
-
-# 🔗 Explore Signly Here
-
-🚀 Live Demo: YOUR_LINK_HERE
-💻 GitHub Repository: YOUR_GITHUB_LINK_HERE
-
----
-
-# 📚 References
-
-* React.js Documentation
-* Node.js Documentation
-* Express.js Documentation
-* MongoDB Documentation
-* JWT Documentation
-* Tailwind CSS Documentation
